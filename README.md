@@ -4,7 +4,7 @@ HTW Uni Projekt im Kurs Methoden der Wissensvearbeitung
 Um den Code selbst auszuprobieren die .ipynb Datei in Google Collab öffnen (Icon in der Datei)
 
 
-
+---
 
 # Quellen
 * Maslov, Dimitri 2021. TinyML Course #4 IoT Weather Prediction (TensorFlow Micro).Hackster.io. https://www.hackster.io/dmitrywat/tinyml-course-4-iot-weather-prediction-tensorflow-micro-19160b [Stand 2021-09-23]. 
