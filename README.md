@@ -10,3 +10,6 @@ Um den Code selbst auszuprobieren die .ipynb Datei in Google Collab öffnen (Ico
 * Maslov, Dimitri 2021. TinyML Course #4 IoT Weather Prediction (TensorFlow Micro).Hackster.io. https://www.hackster.io/dmitrywat/tinyml-course-4-iot-weather-prediction-tensorflow-micro-19160b [Stand 2021-09-23]. 
 * Beniaguev, David A Historical Hourly Weather Data 2012-2017. https://kaggle.com/selfishgene/historical-hourly-weather-data [Stand 2021-09-26].
 * Tanner, Gilbert Arduino Nano 33 BLE Sense Overview. Gilbert Tanner. https://gilberttanner.com/ [Stand 2021-09-26].
+* Zloch, Baptiste https://github.com/BaptisteZloch/MakeIT-How-to-forecast-weather-with-Arduino-Nano-33 [Stand 2021-09-27].
+* Florin, Andrei https://github.com/FlorinAndrei/WeatherStation [Stand 2021-09-27].
+* Robocraze https://github.com/Robocraze/Nano-33-BLE-Examples [Stand 2021-09-27].
