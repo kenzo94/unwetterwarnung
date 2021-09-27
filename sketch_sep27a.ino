@@ -61,6 +61,7 @@ BLEService customService("180C");
 BLEStringCharacteristic ble_temperature("2A56", BLERead | BLENotify, 20);
 BLEStringCharacteristic ble_humidity("2A57", BLERead | BLENotify, 20);
 BLEStringCharacteristic ble_pressure("2A58", BLERead | BLENotify, 20);
+BLEStringCharacteristic ble_weather("2A59", BLERead | BLENotify, 20);
 
 int ledState = LOW;
 
@@ -97,6 +98,7 @@ void setup()
     customService.addCharacteristic(ble_temperature);
     customService.addCharacteristic(ble_humidity);
     customService.addCharacteristic(ble_pressure);
+    customService.addCharacteristic(ble_weather);
 
     // Adding the service to the BLE stack
     BLE.addService(customService);
@@ -140,15 +142,15 @@ void loop()
             float inputs[INPUTS] = {temp_g, hum_g, pressure_g}; // Create an array containing our parameters in the same order than in google colab
             float outputs[OUTPUTS] = {0, 0, 0};     // Create an empty array that will contain the 5 outputs of the Neural Network
             weather_model.predict(inputs, outputs);       // Predict the inputs and fill the outputs arguments with the neural network output
-
+            
             // Print result
             Serial.print("Wettervorhersage: ");
             Serial.println(returnPredict(outputs));
             Serial.println("");
+            ble_weather.writeValue(returnPredict(outputs));    // Writing prediction to the characteristic
 
-             
+ 
             // blink the LED every cycle
-            // (heartbeat indicator)
             ledState = ledState ? LOW: HIGH;
             digitalWrite(LED_BUILTIN,  ledState);
             delay(10000); 
